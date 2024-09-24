@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: rgb(244, 236, 221);">
+    <div class="container bg-light w-25 mt-5">
+        <h1>Register</h1>
+        <form name="form2">
+            <label for="name2" class="form-label mt-3">Name</label>
+            <input type="text" name="name2" id="name2" class="form-control">
+            <label for="email2" class="form-label">E-Mail Address</label>
+            <input type="email" name="email2" id="email2" class="form-control">
+            <label for="pass2" class="form-label">Password</label>
+            <input type="password" name="pass2" id="pass2" class="form-control">
+            <p>By registring you agree with our terms and condition.</p>
+            <div class="d-flex justify-content-end">
+                <button id="btn2" class="btn btn-primary ">Register</button>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <p>Already have an account?</p>
+                <a href="login.html">Login</a>
+            </div>
+        </form>
+
+     <script>
+        let btn = document.getElementById("btn2");
+        btn.onclick=function(){
+            let name = document.forms["form2"]["name2"].value;
+            let email = document.forms["form2"]["email2"].value;
+            let password = document.forms["form2"]["pass2"].value;
+            if(name==""||email==""||password==""){
+                      alert("you musr right something!!!!")
+            }
+        }
+     </script>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
